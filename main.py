@@ -31,13 +31,13 @@ class Rectangle:
             self.height = height
 
     def get_area(self):
-        return self.width*self.height
+        return self.width * self.height
 
     def get_perimeter(self):
-        return 2*self.width + 2*self.height
+        return 2*self.width + 2 * self.height
 
     def get_diagonal(self):
-        return (self.width**2+self.height**2)**.5
+        return (self.width**2 + self.height**2)**.5
 
     def get_picture(self):
         w, h = vars(self).values()
@@ -67,21 +67,22 @@ class Square(Rectangle):
         super().set_width(side)
         super().set_height(side)
 
-rect = Rectangle(10, 5)
-print(rect.get_area())
-rect.set_height(3)
-print(rect.get_perimeter())
-print(rect)
-print(rect.get_picture())
+if __name__ == "__main__":
+    rect = Rectangle(10, 5)
+    print(rect.get_area())
+    rect.set_height(3)
+    print(rect.get_perimeter())
+    print(rect)
+    print(rect.get_picture())
 
-sq = Square(9)
-print(sq.get_area())
-sq.set_side(4)
-print(sq.get_diagonal())
-print(sq)
-print(sq.get_picture())
+    sq = Square(9)
+    print(sq.get_area())
+    sq.set_side(4)
+    print(sq.get_diagonal())
+    print(sq)
+    print(sq.get_picture())
 
-sq.set_side(5)
-rect = Rectangle(4, 8)
-rect2 = Rectangle(3, 6)
-print(rect.get_amount_inside(rect2))
+    sq.set_side(5)
+    rect = Rectangle(4, 8)
+    rect2 = Rectangle(3, 6)
+    print(rect.get_amount_inside(rect2))
